@@ -1,33 +1,75 @@
-<svg viewBox="-50 -50 100 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="none">
+<svg viewBox="-45 -45 90 90" fill="none" stroke="white" xmlns="http://www.w3.org/2000/svg">
     <defs>
-        <linearGradient id="gradient" gradientUnits="userSpaceOnUse" x1="-25" x2="25" y1="-25" y2="25">
-            <stop offset="0%" stop-color="#4AF"/>
-            <stop offset="100%" stop-color="#A4F"/>
-        </linearGradient>
-
-        <g id="eye">
-            <polygon points="0,-5 1,-5 1.5,5 -1.5,5" fill="url(#gradient)" transform="rotate(45),scale(1.5)"/>
-            <polygon points="0,-5 1,-5 1.5,5 -1.5,5" fill="url(#gradient)" transform="rotate(120),scale(1.5)"/>
-        </g>
+        <mask id="m_head">
+            <rect x="-50" y="-50" width="100" height="100" fill="white" />
+            <circle r="16" fill="black" cx="-17" cy="-3"/>
+        </mask>
+        <mask id="m_atenna">
+            <rect x="-50" y="-50" width="100" height="100" fill="white" />
+            <circle fill="black" cx="-1" cy="-42" r="4"/>
+        </mask>
     </defs>
 
-    <g filter="url(#noise)">
-
-    </g>
-    <g id="face">
-        <circle r="25" stroke="url(#gradient)" stroke-width="4"/>
-        <use href="#eye" x="-10" y="-6" />
-        <use href="#eye" x="-10" y="-6" transform="scale(-1, 1)" />
-
+    <g id="base" transform="translate(5 7)">
+        <!-- Head -->
         <path
             d="
-            M -14 0
-            Q -5 12 12 5
+            M -30 -30
+            L 25 -25
+            L 20 20
+            L 5 30
+            L -25 25
+            Z
             "
-            stroke="url(#gradient)"
+            stroke="white"
             stroke-width="2"
-            stroke-linecap="butt"
-            transform="translate(-1, 7)"
+            mask="url(#m_head)"
+        />
+
+        <!-- Antenna -->
+        <path 
+            d="
+            M -2.5 -27.5
+            L -5 -35
+            L -1 -42
+            "
+            stroke-width="1.5"
+            mask="url(#m_atenna)"
+        />
+        <circle cx="-1" cy="-42" r="4" />
+
+        <!-- Eyes -->
+        <circle r="16" cx="-17" cy="-3" stroke-width="1.5"/>
+        <path 
+            d="
+            M -10 20
+            L -7 16
+            M -5 17
+            L -4 22
+            M -2 23
+            L 0 19
+            "
+            stroke="white"
+            stroke-width="0.5"
+            stroke-linecap="round"
+        />
+        <!-- Mouth -->
+        <line x1="-10" y1="17.5" x2="1" y2="22" />
+        <path
+            id="eye"
+            d="
+            M 5 -12
+            L 15 10
+            L 12 12
+            Z
+
+            M 15 -12
+            L 18 -10
+            L 2.5 12
+            Z
+            "
+            stroke="none"
+            fill="white"
         />
     </g>
 </svg>
