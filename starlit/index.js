@@ -1,5 +1,6 @@
 const svgfs = require('./svgfs');
 const path = require('path');
+const starlit = require('./starlit');
 
 console.log('\nGenerating StarLit Background\n---------------------------------------');
 
@@ -8,8 +9,8 @@ const templatePath = path.join(process.cwd(), 'starlit-temp.svg');
 console.log('Loading SVG template: ' + templatePath);
 let svg = svgfs.loadSvg(templatePath);
 
-// Do SVG stuff
-svg += '\t<circle cx="0" cy="0" r="10" />';
+// Starlit
+svg = starlit(svg);
 
 // Save
 const starlitPath = path.join(process.cwd(), 'starlit.svg');
