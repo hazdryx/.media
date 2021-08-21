@@ -1,5 +1,6 @@
 # Directories
 .vscode/
+starlit/node_modules
 
 # Files
 starlit.svg

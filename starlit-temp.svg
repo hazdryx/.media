@@ -1,2 +1,14 @@
 <svg viewBox="-300 -50 600 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="lineStroke" x1="-300" x2="300" y1="0" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#bf19ff" />
+            <stop offset="100%" stop-color="#19bfff" />
+        </linearGradient>
+        <g id="star">
+            <circle r="0.5" fill="white" fill-opacity="0.5" />
+        </g>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+		</style>
+    </defs>
 </svg>
