@@ -1,0 +1,11 @@
+{
+  "name": "starlit",
+  "version": "1.0.0",
+  "description": "Creates a background SVG file for Hazdryx.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./"
+  },
+  "author": "Christopher Bishop",
+  "license": "ISC"
+}
