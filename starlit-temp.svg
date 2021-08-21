@@ -12,7 +12,9 @@
 		</style>
     </defs>
 
-    <!-- INJECT CODE HERE -->
+    <rect x="-300" y="-50" width="600" height="100" fill="black" />
 
+    <!-- INJECT CODE HERE -->
+    
     <text fill="white" text-anchor="middle" alignment-baseline="middle" font-family="Orbitron" font-size="6vh" >Hazdryx</text>
 </svg>
