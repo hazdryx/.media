@@ -1,0 +1,21 @@
+<svg viewBox="-275 -185 550 370" width="1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <rect id="window" x="-250" y="-150" width="500" height="300" rx="10" />
+    <mask id="m_window">
+      <rect x="-275" y="-185" width="550" height="370" fill="black" />
+      <use href="#window" fill="white" />
+    </mask>
+  </defs>
+  <rect x="-275" y="-185" width="550" height="370" fill="#333E33" />
+  <g mask="url(#m_window)">
+    <use href="#window" fill="black" />
+    <rect x="-250" y="-150" width="500" height="30" fill="#AAA" />
+    <circle cx="-235" cy="-135" r="7" fill="#E34" />
+    <circle cx="-215" cy="-135" r="7" fill="#EC2" />
+    <circle cx="-195" cy="-135" r="7" fill="#3A4" />
+    <image 
+      href="https://pluspng.com/img-png/nodejs-png-nodejs-icon-png-50-px-1600.png" 
+      x="-150" y="-125" height="300"
+    />
+  </g>
+</svg>
