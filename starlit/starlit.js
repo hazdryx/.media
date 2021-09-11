@@ -11,7 +11,7 @@ module.exports = function() {
     // Constants
     const WIDTH = 650;
     const HEIGHT = 150;
-    const MIN_DISTANCE_SQ = 350;
+    const MAX_DISTANCE_SQ = 350;
 
     // Generate stars.
     let stars = [];
@@ -31,13 +31,13 @@ module.exports = function() {
             let dx = s1.x - s0.x;
             let dy = s1.y - s0.y;
             let dist = dx * dx + dy * dy;
-            if (dist < MIN_DISTANCE_SQ) {
+            if (dist < MAX_DISTANCE_SQ) {
                 lines.push({
                     x1: s0.x,
                     y1: s0.y,
                     x2: s1.x,
                     y2: s1.y,
-                    opacity: Math.max(dist / MIN_DISTANCE_SQ, 0.15)
+                    opacity: Math.min(1, Math.max(dist / MAX_DISTANCE_SQ, 0.15))
                 });
             }
         }
